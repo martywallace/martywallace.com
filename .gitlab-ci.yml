@@ -1,0 +1,17 @@
+image: node:16
+
+pages:
+  cache:
+    key:
+      files:
+        - yarn.lock
+    paths:
+      - node_modules
+  script:
+    - yarn install --frozen-lockfile
+    - yarn build
+    - rm -rf public
+    - mv out public
+  artifacts:
+    paths:
+      - public
