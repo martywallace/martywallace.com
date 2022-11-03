@@ -7,6 +7,9 @@ pages:
         - yarn.lock
     paths:
       - node_modules
+  before_script:
+    - npm config set "@fortawesome:registry" https://npm.fontawesome.com/
+    - npm config set "//npm.fontawesome.com/:_authToken" ${FORTAWESOME_TOKEN}
   script:
     - yarn install --frozen-lockfile
     - yarn build
