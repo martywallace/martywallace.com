@@ -14,9 +14,9 @@ module.exports = {
           DEFAULT: '#CED1DE',
         },
         'ui-dark': {
-          lighter: '#2F3759',
-          light: '#131B3B',
-          DEFAULT: '#060E2A',
+          lighter: '#3A4955',
+          light: '#222C34',
+          DEFAULT: '#131E27',
         },
         primary: {
           light: '#E0F353',

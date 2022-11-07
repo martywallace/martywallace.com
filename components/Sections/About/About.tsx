@@ -6,7 +6,7 @@ import SkillGroup from './components/SkillGroup';
 
 export const About: FC = () => {
   return (
-    <Section style="light">
+    <Section>
       <SectionTitle title="About Me" />
 
       <div className="grid md:grid-cols-5 gap-20">
@@ -14,16 +14,15 @@ export const About: FC = () => {
           <p>
             I am a self-taught full-stack developer based in Australia with
             experience across many disciplines including infrastructure
-            management, backend development and frontend development. Writing
-            code and working with technology are passions that I developed in my
-            early teens and have sustained 15+ years on.
+            management, backend development and frontend development.
           </p>
           <p>
             My career so far has been equal parts agency and startup. Agency
-            taught me to work efficiently, meet client expectations and
-            constantly think on my feet while the startup environment has
-            allowed me to focus on stretching my core skills to their limits to
-            become a leading talent in the industry.
+            taught me to work efficiently, meet and manage client expectations
+            and constantly think on my feet in the face of constant new
+            challenges. The startup environment has allowed me to focus on
+            stretching my core skills to their limits and become a leading
+            talent among my peers in the industry.
           </p>
         </article>
         <div className="md:col-span-2">
@@ -31,28 +30,26 @@ export const About: FC = () => {
 
           <SkillGroup
             title="Core"
-            summary="Core skills and technology that I work with at least weekly."
+            summary="Core skills and technology that I work with the most consistently."
           >
             <Skill name="TypeScript" core />
             <Skill name="Apollo GraphQL" core />
             <Skill name="Nest.js" core />
-            <Skill name="Next.js" core />
             <Skill name="React" core />
             <Skill name="PostgreSQL" core />
             <Skill name="GitLab CI/CD" core />
-            <Skill name="TailwindCSS" core />
           </SkillGroup>
 
           <SkillGroup
             title="Additional"
-            summary="Additional skills and technology that I have a high proficiency with but use semi-regularly."
+            summary="Additional skills and technology that I have a high proficiency in but aren't necessarily my bread and butter."
           >
             <Skill name="PHP" />
             <Skill name="Vue.js" />
             <Skill name="Kubernetes" />
             <Skill name="Cloudflare Workers" />
-            <Skill name="DataDog" />
             <Skill name="RabbitMQ" />
+            <Skill name="Next.js" />
           </SkillGroup>
         </div>
       </div>

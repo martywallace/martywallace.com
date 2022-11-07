@@ -8,10 +8,13 @@ type Props = {
 };
 
 const theme = (fullHeight?: boolean, style?: Props['style']) =>
-  classNames('flex items-center px-5 py-16', {
-    'min-h-screen border-b border-ui-dark-light': fullHeight,
-    'bg-ui-dark-light': style === 'light',
-  });
+  classNames(
+    'flex items-center px-5 py-6 md:py-16 border-b border-ui-dark-light',
+    {
+      'min-h-screen': fullHeight,
+      'bg-ui-dark-light': style === 'light',
+    },
+  );
 
 export const Section: FC<Props> = ({ children, fullHeight, style }) => {
   return (

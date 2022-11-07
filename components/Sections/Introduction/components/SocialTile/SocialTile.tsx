@@ -12,16 +12,16 @@ type Props = {
 export const SocialTile: FC<Props> = ({ icon, title, summary, url }) => {
   return (
     <a
-      className="flex group border hover:bg-ui-dark-light border-ui-dark-lighter rounded-md p-3"
+      className="transition-all relative bg-ui-dark-light rounded-md p-5 shadow-lg top-0 md:hover:-top-2"
       rel="noopener noreffer"
       href={url}
       target="_blank"
     >
-      <div className="mb-5">
-        <FontAwesomeIcon className="text-2xl" icon={icon} />
-      </div>
-      <div className="flex-grow pl-3">
-        <h3 className="font-light text-lg text-primary mb-2">{title}</h3>
+      <div className="flex-grow">
+        <div className="flex items-center mb-2">
+          <FontAwesomeIcon className="text-xl mr-2" icon={icon} />
+          <h3 className="font-light  text-primary">{title}</h3>
+        </div>
         <article className="prose">
           <p>{summary}</p>
         </article>

@@ -15,6 +15,12 @@ export const Work: FC = () => {
           date={new Date('2022-11-01')}
           url="https://medium.com/@marty.wallace/thoughts-on-graphql-after-2-years-4c4d58e3059b"
         />
+        <Publication
+          title="Simply Wall St's Journey on GraphQL Adoption"
+          excerpt="Moving to GraphQL and a federated architecture has been very rewarding and exciting for the team so far, though not without its own challenges, particularly when it comes to maintaining consistently high performance."
+          date={new Date('2021-07-26')}
+          url="https://medium.com/simplywallst/simply-wall-sts-journey-on-graphql-adoption-33c196f57ab2"
+        />
       </div>
     </Section>
   );

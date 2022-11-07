@@ -12,13 +12,13 @@ import SocialTile from './components/SocialTile';
 export const Introduction: FC = () => {
   return (
     <Section fullHeight>
-      <div className="mb-10 text-center">
+      <div className="mb-16 text-center">
         <figure className="relative w-36 h-36 mx-auto mb-10">
           <img
-            className="relative z-10 transform rotate-3 rounded-2xl"
+            className="relative z-10 transform rotate-3 rounded-2xl shadow-lg"
             src="https://avatars.githubusercontent.com/u/606154"
           />
-          <span className="absolute inset-0 transform rotate-12 bg-primary rounded-2xl" />
+          <span className="absolute inset-0 transform rotate-12 bg-ui-dark-lighter rounded-2xl" />
         </figure>
         <p className="text-2xl mb-5">
           Hello! I'm <span className="text-primary">Marty</span>, a full-stack
@@ -36,7 +36,7 @@ export const Introduction: FC = () => {
         <SocialTile
           icon={faGithub}
           title="GitHub"
-          summary="View my open-source contributions."
+          summary="View my open-source projects."
           url="https://github.com/martywallace"
         />
         <SocialTile
@@ -48,7 +48,7 @@ export const Introduction: FC = () => {
         <SocialTile
           icon={faStackOverflow}
           title="StackOverflow"
-          summary="View my 11+ years worth of contributions to StackOverflow."
+          summary="View my 11+ years of Q&A contributions."
           url="https://stackoverflow.com/users/699632/marty"
         />
       </div>
