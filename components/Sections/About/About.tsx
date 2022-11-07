@@ -24,6 +24,15 @@ export const About: FC = () => {
             stretching my core skills to their limits and become a leading
             talent among my peers in the industry.
           </p>
+          <p>
+            The style of work I enjoy the most is in a support role where I can
+            increase the productivity and enjoyment of a wider team by
+            streamlining and extending automation, building and maintaining
+            shared libraries and packages to provide common functionality and
+            leveraging my knowledge and experience in software architecture for
+            large systems in a way that will allow them to reach their scaling
+            potential while simultaneously improving developer experience.
+          </p>
         </article>
         <div className="md:col-span-2">
           <h3 className="text-2xl mb-5">Skills &amp; Technology</h3>
