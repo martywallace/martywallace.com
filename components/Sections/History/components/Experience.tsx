@@ -22,7 +22,9 @@ const Experience: FC<Props> = ({ icon, title, children }) => {
         </span>
         <h3 className="ml-3 font-bold">{title}</h3>
       </div>
-      <div className="prose group-hover:text-type-lightest">{children}</div>
+      <div className="prose transition group-hover:text-type-lightest">
+        {children}
+      </div>
     </article>
   );
 };
