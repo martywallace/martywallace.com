@@ -16,9 +16,12 @@ export const Introduction: FC = () => {
         <figure className="relative w-36 h-36 mx-auto mb-10">
           <img
             className="relative z-10 transform rotate-3 rounded-2xl shadow-lg"
+            width={144}
+            height={144}
             src="https://avatars.githubusercontent.com/u/606154"
+            alt=""
           />
-          <span className="absolute inset-0 transform rotate-12 bg-ui-dark-lighter rounded-lg" />
+          <span className="absolute inset-0 transform rotate-12 bg-ui-lighter rounded-lg" />
         </figure>
         <p className="text-2xl mb-5">
           Hello! I'm <span className="text-primary">Marty</span>, a full-stack
@@ -53,7 +56,7 @@ export const Introduction: FC = () => {
         />
       </div>
 
-      <div className="text-center mt-10">
+      <div className="text-center mt-10 animate-bounce">
         <FontAwesomeIcon icon={faChevronDown} />
       </div>
     </Section>

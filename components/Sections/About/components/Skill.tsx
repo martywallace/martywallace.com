@@ -12,8 +12,8 @@ const theme = (core?: boolean) =>
   classNames(
     'flex items-center px-4 py-2 bg-gradient-to-tl text-sm text-white rounded-md shadow-md',
     {
-      'from-primary to-primary-darker text-ui-dark': core,
-      'from-secondary to-secondary-light': !core,
+      'from-primary to-primary-darker text-ui': core,
+      'from-ui-lightest to-ui-lighter': !core,
     },
   );
 

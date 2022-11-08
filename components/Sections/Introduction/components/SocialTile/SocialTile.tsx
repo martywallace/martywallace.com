@@ -1,6 +1,7 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC } from 'react';
+import { track } from '../../../../../tracking';
 
 type Props = {
   readonly icon: IconProp;
@@ -12,7 +13,10 @@ type Props = {
 export const SocialTile: FC<Props> = ({ icon, title, summary, url }) => {
   return (
     <a
-      className="transition-all relative bg-ui-dark-light rounded-md p-8 shadow-lg top-0 md:hover:-top-2"
+      onMouseEnter={() => track('social-tile.mouse-enter', { title })}
+      onMouseLeave={() => track('social-tile.mouse-leave', { title })}
+      onClick={() => track('social-tile.click', { title })}
+      className="transition-all group relative bg-ui-light border border-ui-lighter hover:bg-ui-lighter rounded-md p-8 shadow-lg hover:shadow-xl top-0 md:hover:-top-2"
       rel="noopener noreffer"
       href={url}
       target="_blank"
@@ -22,7 +26,7 @@ export const SocialTile: FC<Props> = ({ icon, title, summary, url }) => {
           <FontAwesomeIcon className="text-xl mr-3" icon={icon} />
           <h3 className="font-bold text-primary">{title}</h3>
         </div>
-        <article className="prose">
+        <article className="prose transition group-hover:text-type-lightest">
           <p>{summary}</p>
         </article>
       </div>

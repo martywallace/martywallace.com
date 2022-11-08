@@ -10,13 +10,23 @@ module.exports = {
     },
     extend: {
       colors: {
-        'ui-light': {
-          DEFAULT: '#CED1DE',
+        type: {
+          lightest: '#CFD8DD',
+          lighter: '#B7C4CC',
+          light: '#9FB1BB',
+          DEFAULT: '#889DAA',
+          dark: '#667F8F',
+          darker: '#4C5F6B',
+          darkest: '#334048',
         },
-        'ui-dark': {
-          lighter: '#3A4955',
-          light: '#222C34',
-          DEFAULT: '#131E27',
+        ui: {
+          lightest: '#334048',
+          lighter: '#2A353C',
+          light: '#222A30',
+          DEFAULT: '#13181B',
+          dark: '#121518',
+          darker: '#090B0D',
+          darkest: '#13181B',
         },
         primary: {
           lighter: '#E4F466',
@@ -34,7 +44,7 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.400'),
+            color: theme('colors.type.DEFAULT'),
             a: {
               color: theme('colors.primary.DEFAULT'),
               textDecoration: 'underline',

@@ -1,5 +1,6 @@
 import { format } from 'date-fns';
 import { FC } from 'react';
+import { track } from '../../../../tracking';
 
 type Props = {
   readonly title: string;
@@ -10,17 +11,18 @@ type Props = {
 
 const Publication: FC<Props> = ({ title, excerpt, date, url }) => {
   return (
-    <article className="flex items-center mb-5 last:mb-0">
-      <time className="flex flex-shrink-0 w-20 rounded-md h-16 items-center flex-col justify-center bg-ui-dark-light text-white shadow-lg">
-        <strong className="block text-lg leading-tight">
-          {format(date, 'do')}
+    <article className="flex mb-10 last:mb-0">
+      <time className="flex flex-shrink-0 w-20 rounded-md h-16 items-center flex-col justify-center bg-ui-lighter text-white shadow-lg">
+        <strong className="block text-xl leading-tight">
+          {format(date, 'dd')}
         </strong>
-        <span className="text-sm text-gray-400">{format(date, 'MMM')}</span>
+        <span className="text-xs text-type">{format(date, 'MMM yyyy')}</span>
       </time>
 
       <div className="pl-5">
-        <h4 className="text-lg font-bold">
+        <h4 className="font-bold">
           <a
+            onClick={() => track('article.title.click', { url })}
             className="hover:underline"
             href={url}
             target="_blank"
@@ -29,8 +31,19 @@ const Publication: FC<Props> = ({ title, excerpt, date, url }) => {
             {title}
           </a>
         </h4>
-        <div className="prose max-w-none">
-          <p className="line-clamp-1">{excerpt}</p>
+        <div className="prose max-w-none mb-2">
+          <p className="line-clamp-2">{excerpt}</p>
+        </div>
+        <div>
+          <a
+            onClick={() => track('article.read-more.click', { url })}
+            className="text-primary transition hover:text-primary-lighter"
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read more&hellip;{' '}
+          </a>
         </div>
       </div>
     </article>

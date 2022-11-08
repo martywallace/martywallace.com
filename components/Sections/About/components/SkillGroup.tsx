@@ -8,7 +8,7 @@ type Props = {
 
 const SkillGroup: FC<Props> = ({ title, summary, children }) => {
   return (
-    <div className="border-b last:border-0 border-ui-dark-light pb-5 mb-5 last:mb-0">
+    <div className="border-b last:border-0 border-ui-light pb-5 mb-5 last:mb-0">
       <h4 className="mb-1 text-lg font-bold">{title}</h4>
       <article className="prose max-w-none mb-3">
         <p>{summary}</p>

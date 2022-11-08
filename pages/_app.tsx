@@ -13,6 +13,14 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Marty Wallace | Full Stack Developer</title>
+        <meta
+          name="description"
+          content="Marty Wallace is a full-stack web developer that specialises in architecting and developing large-scale technical solutions while keeping them simple, scalable and efficient."
+        />
+        <meta
+          property="og:image"
+          content="https://avatars.githubusercontent.com/u/606154"
+        />
       </Head>
       <Script
         strategy="afterInteractive"
