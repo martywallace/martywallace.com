@@ -8,14 +8,14 @@ type Props = {
   readonly url: string;
 };
 
-export const Publication: FC<Props> = ({ title, excerpt, date, url }) => {
+const Publication: FC<Props> = ({ title, excerpt, date, url }) => {
   return (
     <article className="flex items-center mb-5 last:mb-0">
-      <time className="flex flex-shrink-0 w-20 rounded-md h-16 items-center flex-col justify-center bg-gradient-to-tr from-primary to-primary-light text-ui-dark">
+      <time className="flex flex-shrink-0 w-20 rounded-md h-16 items-center flex-col justify-center bg-ui-dark-light text-white shadow-lg">
         <strong className="block text-lg leading-tight">
           {format(date, 'do')}
         </strong>
-        <span className="text-sm">{format(date, 'MMM')}</span>
+        <span className="text-sm text-gray-400">{format(date, 'MMM')}</span>
       </time>
 
       <div className="pl-5">
@@ -36,3 +36,5 @@ export const Publication: FC<Props> = ({ title, excerpt, date, url }) => {
     </article>
   );
 };
+
+export default Publication;

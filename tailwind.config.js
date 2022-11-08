@@ -19,18 +19,22 @@ module.exports = {
           DEFAULT: '#131E27',
         },
         primary: {
+          lighter: '#E4F466',
           light: '#E0F353',
           DEFAULT: '#D8F024',
+          dark: '#CCE50F',
+          darker: '#BAD20F',
         },
         secondary: {
-          light: '#1098F7',
-          DEFAULT: '#39A9F9',
+          light: '#7B82CC',
+          DEFAULT: '#6C74C6',
+          dark: '#5D66C0',
         },
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.ui-light.DEFAULT'),
+            color: theme('colors.gray.400'),
             a: {
               color: theme('colors.primary.DEFAULT'),
               textDecoration: 'underline',

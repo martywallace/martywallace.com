@@ -6,7 +6,7 @@ type Props = {
   readonly children: ReactNode;
 };
 
-export const SkillGroup: FC<Props> = ({ title, summary, children }) => {
+const SkillGroup: FC<Props> = ({ title, summary, children }) => {
   return (
     <div className="border-b last:border-0 border-ui-dark-light pb-5 mb-5 last:mb-0">
       <h4 className="mb-1 text-lg font-bold">{title}</h4>
@@ -18,3 +18,5 @@ export const SkillGroup: FC<Props> = ({ title, summary, children }) => {
     </div>
   );
 };
+
+export default SkillGroup;

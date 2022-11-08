@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Section from '../../Section';
-import SectionTitle from '../../Section/components/SectionTitle';
+import SectionTitle from '../../SectionTitle';
 import Skill from './components/Skill';
 import SkillGroup from './components/SkillGroup';
 
@@ -12,7 +12,7 @@ export const About: FC = () => {
       <div className="grid md:grid-cols-5 gap-20">
         <article className="prose max-w-none md:col-span-3">
           <p>
-            I am a self-taught full-stack developer based in Australia with
+            I am a self-taught full-stack web developer based in Australia with
             experience across many disciplines including infrastructure
             management, backend development and frontend development.
           </p>
@@ -42,11 +42,11 @@ export const About: FC = () => {
             summary="Core skills and technology that I work with the most consistently."
           >
             <Skill name="TypeScript" core />
-            <Skill name="Apollo GraphQL" core />
+            <Skill name="GraphQL" core />
             <Skill name="Nest.js" core />
             <Skill name="React" core />
             <Skill name="PostgreSQL" core />
-            <Skill name="GitLab CI/CD" core />
+            <Skill name="GitLab" core />
           </SkillGroup>
 
           <SkillGroup
@@ -56,9 +56,11 @@ export const About: FC = () => {
             <Skill name="PHP" />
             <Skill name="Vue.js" />
             <Skill name="Kubernetes" />
-            <Skill name="Cloudflare Workers" />
+            <Skill name="Cloudflare" />
             <Skill name="RabbitMQ" />
             <Skill name="Next.js" />
+            <Skill name="TailwindCSS" />
+            <Skill name="Datadog" />
           </SkillGroup>
         </div>
       </div>

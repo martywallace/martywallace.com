@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import Section from '../../Section';
-import SectionTitle from '../../Section/components/SectionTitle';
+import SectionTitle from '../../SectionTitle';
 import Publication from './components/Publication';
 
-export const Work: FC = () => {
+export const Articles: FC = () => {
   return (
     <Section>
       <SectionTitle title="Articles" />
