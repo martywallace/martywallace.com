@@ -3,12 +3,11 @@ import {
   faNewspaper,
   faShoppingBag,
 } from '@fortawesome/pro-light-svg-icons';
-import { FC } from 'react';
 import Section from '../../Section';
 import SectionTitle from '../../SectionTitle';
 import Experience from './components/Experience';
 
-export const History: FC = () => {
+export const History = () => {
   return (
     <Section>
       <SectionTitle title="Work Highlights" align="center" />

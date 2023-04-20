@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { FC, ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 type Props = {
   readonly fullHeight?: boolean;
@@ -14,7 +14,7 @@ const theme = (fullHeight?: boolean, style?: Props['style']) =>
     'bg-ui-light': style === 'light',
   });
 
-const Section: FC<Props> = ({ children, fullHeight, style }) => {
+const Section = ({ children, fullHeight, style }: Props) => {
   return (
     <section className={theme(fullHeight, style)}>
       <div className="w-full max-w-screen-lg mx-auto">{children}</div>

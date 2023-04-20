@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import { FC } from 'react';
 
 type Props = {
   readonly title: string;
@@ -13,7 +12,7 @@ const theme = (align: Props['align']) =>
     'items-end': align === 'right',
   });
 
-const SectionTitle: FC<Props> = ({ title, align = 'left' }) => {
+const SectionTitle = ({ title, align = 'left' }: Props) => {
   return (
     <div className={theme(align)}>
       <h2 className="font-light text-3xl mb-3">{title}</h2>

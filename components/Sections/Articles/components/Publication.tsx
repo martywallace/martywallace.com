@@ -1,5 +1,4 @@
 import { format } from 'date-fns';
-import { FC } from 'react';
 import { track } from '../../../../tracking';
 
 type Props = {
@@ -9,7 +8,7 @@ type Props = {
   readonly url: string;
 };
 
-const Publication: FC<Props> = ({ title, excerpt, date, url }) => {
+const Publication = ({ title, excerpt, date, url }: Props) => {
   return (
     <article className="flex mb-10 last:mb-0">
       <time className="flex flex-shrink-0 w-20 rounded-md h-16 items-center flex-col justify-center bg-ui-lighter text-white shadow-lg">

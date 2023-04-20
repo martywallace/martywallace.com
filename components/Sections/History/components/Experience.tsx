@@ -1,6 +1,6 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FC, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { track } from '../../../../tracking';
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
   readonly children: ReactNode;
 };
 
-const Experience: FC<Props> = ({ icon, title, children }) => {
+const Experience = ({ icon, title, children }: Props) => {
   return (
     <article
       onMouseEnter={() => track('experience.mouse-enter', { title })}

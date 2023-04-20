@@ -1,6 +1,5 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FC } from 'react';
 import { track } from '../../../../../tracking';
 
 type Props = {
@@ -10,7 +9,7 @@ type Props = {
   readonly url: string;
 };
 
-export const SocialTile: FC<Props> = ({ icon, title, summary, url }) => {
+export const SocialTile = ({ icon, title, summary, url }: Props) => {
   return (
     <a
       onMouseEnter={() => track('social-tile.mouse-enter', { title })}

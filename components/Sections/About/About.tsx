@@ -1,10 +1,9 @@
-import { FC } from 'react';
 import Section from '../../Section';
 import SectionTitle from '../../SectionTitle';
 import Skill from './components/Skill';
 import SkillGroup from './components/SkillGroup';
 
-export const About: FC = () => {
+export const About = () => {
   return (
     <Section>
       <SectionTitle title="About Me" />

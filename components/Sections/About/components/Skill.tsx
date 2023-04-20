@@ -1,7 +1,6 @@
 import { faStar } from '@fortawesome/pro-light-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
-import { FC } from 'react';
 
 type Props = {
   readonly name: string;
@@ -17,7 +16,7 @@ const theme = (core?: boolean) =>
     },
   );
 
-const Skill: FC<Props> = ({ name, core }) => {
+const Skill = ({ name, core }: Props) => {
   return (
     <div className={theme(core)}>
       {core && <FontAwesomeIcon className="text-xs mr-1" icon={faStar} />}{' '}

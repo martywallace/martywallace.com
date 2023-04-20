@@ -5,11 +5,10 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faChevronDown } from '@fortawesome/pro-light-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FC } from 'react';
 import Section from '../../Section';
 import SocialTile from './components/SocialTile';
 
-export const Introduction: FC = () => {
+export const Introduction = () => {
   return (
     <Section fullHeight>
       <div className="mb-16 text-center">

@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 type Props = {
   readonly title: string;
@@ -6,7 +6,7 @@ type Props = {
   readonly children: ReactNode;
 };
 
-const SkillGroup: FC<Props> = ({ title, summary, children }) => {
+const SkillGroup = ({ title, summary, children }: Props) => {
   return (
     <div className="border-b last:border-0 border-ui-light pb-5 mb-5 last:mb-0">
       <h4 className="mb-1 text-lg font-bold">{title}</h4>
