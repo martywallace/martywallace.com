@@ -1,3 +1,5 @@
+'use client';
+
 import { format } from 'date-fns';
 import { track } from '../../../../tracking';
 
@@ -11,11 +13,13 @@ type Props = {
 const Publication = ({ title, excerpt, date, url }: Props) => {
   return (
     <article className="flex mb-10 last:mb-0">
-      <time className="flex flex-shrink-0 w-20 rounded-md h-16 items-center flex-col justify-center bg-ui-lighter text-white shadow-lg">
+      <time className="flex flex-shrink-0 w-20 rounded-md h-16 items-center flex-col justify-center bg-gray-700 text-white shadow-lg">
         <strong className="block text-xl leading-tight">
           {format(date, 'dd')}
         </strong>
-        <span className="text-xs text-type">{format(date, 'MMM yyyy')}</span>
+        <span className="text-xs text-gray-300">
+          {format(date, 'MMM yyyy')}
+        </span>
       </time>
 
       <div className="pl-5">
@@ -36,7 +40,7 @@ const Publication = ({ title, excerpt, date, url }: Props) => {
         <div>
           <a
             onClick={() => track('article.read-more.click', { url })}
-            className="text-primary transition hover:text-primary-lighter"
+            className="text-amber-500 transition hover:text-amber-300"
             href={url}
             target="_blank"
             rel="noopener noreferrer"

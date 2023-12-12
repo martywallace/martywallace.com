@@ -8,10 +8,10 @@ type Props = {
 };
 
 const theme = (fullHeight?: boolean, style?: Props['style']) =>
-  classNames('flex items-center px-5 lg:py-28 border-b border-ui-light', {
+  classNames('flex items-center px-5 lg:py-28 border-b border-gray-800', {
     'min-h-screen py-16': fullHeight,
     'py-6': !fullHeight,
-    'bg-ui-light': style === 'light',
+    'bg-gray-800': style === 'light',
   });
 
 const Section = ({ children, fullHeight, style }: Props) => {

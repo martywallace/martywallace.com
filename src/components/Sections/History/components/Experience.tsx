@@ -1,3 +1,5 @@
+'use client';
+
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ReactNode } from 'react';
@@ -14,15 +16,15 @@ const Experience = ({ icon, title, children }: Props) => {
     <article
       onMouseEnter={() => track('experience.mouse-enter', { title })}
       onMouseLeave={() => track('experience.mouse-leave', { title })}
-      className="p-5 rounded-md border border-ui-lighter bg-ui-light shadow-md group lg:hover:-top-3 relative top-0 md:transition-all hover:bg-ui-lighter"
+      className="p-5 rounded-md border border-gray-700 bg-gray-800 shadow-md group lg:hover:-top-3 relative top-0 md:transition-all hover:bg-gray-700"
     >
       <div className="flex items-center mb-3">
-        <span className="w-10 h-8 bg-gradient-to-tr from-primary to-primary-dark text-ui rounded-md shadow-lg flex items-center justify-center">
+        <span className="w-10 h-8 bg-amber-500 text-gray-900 rounded-md shadow-lg flex items-center justify-center">
           <FontAwesomeIcon icon={icon} />
         </span>
         <h3 className="ml-3 font-bold">{title}</h3>
       </div>
-      <div className="prose transition group-hover:text-type-lightest">
+      <div className="prose transition group-hover:text-gray-100">
         {children}
       </div>
     </article>

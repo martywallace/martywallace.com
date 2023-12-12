@@ -20,11 +20,11 @@ export const Introduction = () => {
             src="https://avatars.githubusercontent.com/u/606154"
             alt=""
           />
-          <span className="absolute inset-0 transform rotate-12 bg-ui-lighter rounded-lg" />
+          <span className="absolute inset-0 transform rotate-12 bg-gray-700 rounded-lg" />
         </figure>
         <p className="text-2xl mb-5">
-          Hello! I'm <span className="text-primary">Marty</span>, a full-stack
-          web developer.
+          Hello! I&apos;m <span className="text-amber-500">Marty</span>, a
+          software developer.
         </p>
         <article className="prose md:max-w-sm mx-auto">
           <p>

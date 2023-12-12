@@ -1,6 +1,5 @@
 {
   "extends": [
-    "next/core-web-vitals", 
-    "tslint-config-prettier"
+    "next/core-web-vitals"
   ]
 }
