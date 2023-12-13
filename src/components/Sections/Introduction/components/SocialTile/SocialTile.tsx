@@ -17,7 +17,7 @@ export const SocialTile = ({ icon, title, summary, url }: Props) => {
       onMouseEnter={() => track('social-tile.mouse-enter', { title })}
       onMouseLeave={() => track('social-tile.mouse-leave', { title })}
       onClick={() => track('social-tile.click', { title })}
-      className="transition-all group relative bg-gray-800 border border-gray-700 hover:bg-gray-700 rounded-md p-8 shadow-lg hover:shadow-xl top-0 md:hover:-top-2"
+      className="transition-all group relative bg-gray-800 border border-gray-700 hover:bg-gray-700 rounded-md p-5 shadow-lg hover:shadow-xl top-0 md:hover:-top-2"
       rel="noopener noreffer"
       href={url}
       target="_blank"

@@ -7,31 +7,33 @@ import { faChevronDown } from '@fortawesome/pro-light-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Section from '../../Section';
 import SocialTile from './components/SocialTile';
+import Image from 'next/image';
 
 export const Introduction = () => {
   return (
     <Section fullHeight>
-      <div className="mb-16 text-center">
-        <figure className="relative w-36 h-36 mx-auto mb-10">
-          <img
-            className="relative z-10 transform rotate-3 rounded-2xl shadow-lg"
-            width={144}
-            height={144}
+      <div className="flex flex-col sm:flex-row items-center sm:space-x-8 mx-auto max-w-screen-sm mb-16">
+        <figure className="block flex-shrink-0 w-32 h-32 mx-auto rounded-md shadow-lg overflow-hidden mb-8 sm:mb-0">
+          <Image
+            width={460}
+            height={460}
             src="https://avatars.githubusercontent.com/u/606154"
             alt=""
           />
-          <span className="absolute inset-0 transform rotate-12 bg-gray-700 rounded-lg" />
         </figure>
-        <p className="text-2xl mb-5">
-          Hello! I&apos;m <span className="text-amber-500">Marty</span>, a
-          software developer.
-        </p>
-        <article className="prose md:max-w-sm mx-auto">
-          <p>
-            I specialise in architecting and developing large-scale technical
-            solutions while keeping them simple, scalable and efficient.
+        <div className="text-center sm:text-left">
+          <p className="text-2xl mb-2">
+            Hello! I&apos;m <span className="text-amber-500">Marty</span>, a
+            software developer.
           </p>
-        </article>
+          <article className="prose md:max-w-none">
+            <p>
+              I specialise in architecting and developing large-scale technical
+              solutions while keeping them <em>simple</em>, <em>scalable</em>{' '}
+              and <em>efficient</em>.
+            </p>
+          </article>
+        </div>
       </div>
 
       <div className="grid md:grid-cols-3 mx-auto gap-2 max-w-screen-md">
@@ -55,7 +57,7 @@ export const Introduction = () => {
         />
       </div>
 
-      <div className="text-center mt-10 animate-bounce">
+      <div className="text-center mt-16 animate-bounce">
         <FontAwesomeIcon icon={faChevronDown} />
       </div>
     </Section>
