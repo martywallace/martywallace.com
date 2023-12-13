@@ -18,7 +18,7 @@ export const About = () => {
           <p>
             My career blends agency and startup experiences. Working in agencies
             honed my efficiency, client management, and adaptability to tackle
-            ever-changing challenges. Within startups, I've pushed my core
+            ever-changing challenges. Within startups, I&apos;ve pushed my core
             skills to excel, emerging as a standout talent in the industry.
           </p>
           <p>
