@@ -10,14 +10,14 @@ type Props = {
 };
 
 export const metadata: Metadata = {
-  title: 'Marty Wallace | Software Developer',
+  title: 'Marty - Software Developer',
   description:
     'Marty Wallace is a software developer that specialises in architecting and developing large-scale technical solutions while keeping them simple, scalable and efficient.',
   openGraph: {
     type: 'website',
     locale: 'en_AU',
     url: 'https://martywallace.com.au',
-    siteName: 'Marty Wallace',
+    siteName: 'Marty - Software Developer',
     images: [
       {
         url: 'https://avatars.githubusercontent.com/u/606154',
