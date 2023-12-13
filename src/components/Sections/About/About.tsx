@@ -16,21 +16,18 @@ export const About = () => {
             management, backend development and frontend development.
           </p>
           <p>
-            My career so far has been equal parts agency and startup. Agency
-            taught me to work efficiently, meet and manage client expectations
-            and constantly think on my feet in the face of constant new
-            challenges. The startup environment has allowed me to focus on
-            stretching my core skills to their limits and become a leading
-            talent among my peers in the industry.
+            My career blends agency and startup experiences. Working in agencies
+            honed my efficiency, client management, and adaptability to tackle
+            ever-changing challenges. Within startups, I've pushed my core
+            skills to excel, emerging as a standout talent in the industry.
           </p>
           <p>
-            The style of work I enjoy the most is in a support role where I can
-            increase the productivity and enjoyment of a wider team by
-            streamlining and extending automation, building and maintaining
-            shared libraries and packages to provide common functionality and
-            leveraging my knowledge and experience in software architecture for
-            large systems in a way that will allow them to reach their scaling
-            potential while simultaneously improving developer experience.
+            I thrive in a support role that boosts team productivity and
+            satisfaction. My focus lies in streamlining processes through
+            automation, developing and managing shared libraries, and leveraging
+            my expertise in software architecture for large systems. This
+            approach not only facilitates scalability but also enhances the
+            overall developer experience.
           </p>
         </article>
         <div className="md:col-span-2">

@@ -10,14 +10,14 @@ type Props = {
 };
 
 export const metadata: Metadata = {
-  title: 'Marty - Software Developer',
+  title: 'Marty - Web Developer',
   description:
     'Marty Wallace is a software developer that specialises in architecting and developing large-scale technical solutions while keeping them simple, scalable and efficient.',
   openGraph: {
     type: 'website',
     locale: 'en_AU',
-    url: 'https://martywallace.com.au',
-    siteName: 'Marty - Software Developer',
+    url: 'https://martywallace.com',
+    siteName: 'Marty - Web Developer',
     images: [
       {
         url: 'https://avatars.githubusercontent.com/u/606154',
@@ -48,7 +48,7 @@ export default function RootLayout({ children }: Props) {
       </head>
 
       <body>
-        {children}
+        <main>{children}</main>
 
         <Footer />
       </body>

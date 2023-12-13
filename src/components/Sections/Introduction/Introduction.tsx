@@ -8,6 +8,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Section from '../../Section';
 import SocialTile from './components/SocialTile';
 import Image from 'next/image';
+import {
+  SOCIAL_GITHUB,
+  SOCIAL_LINKEDIN,
+  SOCIAL_STACKOVERFLOW,
+} from '../../../constants';
 
 export const Introduction = () => {
   return (
@@ -22,9 +27,9 @@ export const Introduction = () => {
           />
         </figure>
         <div className="text-center sm:text-left">
-          <p className="text-2xl mb-2">
-            Hello! I&apos;m <span className="text-amber-500">Marty</span>, a
-            software developer.
+          <p className="text-2xl mb-2 font-light">
+            Hello! I&apos;m <span className="text-amber-500">Marty</span>, a web
+            developer.
           </p>
           <article className="prose md:max-w-none">
             <p>
@@ -41,19 +46,19 @@ export const Introduction = () => {
           icon={faGithub}
           title="GitHub"
           summary="View my open-source projects."
-          url="https://github.com/martywallace"
+          url={SOCIAL_GITHUB}
         />
         <SocialTile
           icon={faLinkedin}
           title="LinkedIn"
           summary="View my public LinkedIn profile."
-          url="https://www.linkedin.com/in/marty-wallace-b5b15695/"
+          url={SOCIAL_LINKEDIN}
         />
         <SocialTile
           icon={faStackOverflow}
           title="StackOverflow"
           summary="View my 11+ years of Q&A contributions."
-          url="https://stackoverflow.com/users/699632/marty"
+          url={SOCIAL_STACKOVERFLOW}
         />
       </div>
 

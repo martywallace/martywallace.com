@@ -6,10 +6,10 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    fontFamily: {
-      sans: ['Noto Sans', 'sans-serif'],
-    },
     extend: {
+      fontFamily: {
+        sans: ['Noto Sans', 'sans-serif'],
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
