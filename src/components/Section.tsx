@@ -1,26 +1,33 @@
 import classNames from 'classnames';
 import { ReactNode } from 'react';
-import Container from './Container';
 
 type Props = {
   readonly fullHeight?: boolean;
   readonly children?: ReactNode;
   readonly style?: 'light';
+  readonly padded?: boolean;
+  readonly containerClassName?: string;
 };
 
-const Section = ({ children, fullHeight, style }: Props) => {
+const Section = ({
+  children,
+  fullHeight,
+  style,
+  padded,
+  containerClassName,
+}: Props) => {
   return (
     <section
       className={classNames(
-        'flex items-center lg:py-28 border-b border-gray-700 last:border-b-0',
+        'flex items-center border-b border-gray-700 last:border-b-0',
         {
-          'min-h-screen py-16': fullHeight,
-          'py-6': !fullHeight,
+          'min-h-screen': fullHeight,
           'bg-gray-800': style === 'light',
+          'lg:py-28 py-6': padded,
         },
       )}
     >
-      <Container>{children}</Container>
+      <div className={classNames('w-full', containerClassName)}>{children}</div>
     </section>
   );
 };
