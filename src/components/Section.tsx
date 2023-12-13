@@ -12,7 +12,7 @@ const Section = ({ children, fullHeight, style }: Props) => {
   return (
     <section
       className={classNames(
-        'flex items-center lg:py-28 border-b border-gray-800 last:border-b-0',
+        'flex items-center lg:py-28 border-b border-gray-700 last:border-b-0',
         {
           'min-h-screen py-16': fullHeight,
           'py-6': !fullHeight,

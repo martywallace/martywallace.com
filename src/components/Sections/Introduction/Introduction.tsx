@@ -19,17 +19,12 @@ export const Introduction = () => {
     <Section fullHeight>
       <div className="flex flex-col sm:flex-row items-center sm:space-x-8 mx-auto max-w-screen-sm mb-16">
         <figure className="block flex-shrink-0 w-32 h-32 mx-auto rounded-md shadow-lg overflow-hidden mb-8 sm:mb-0">
-          <Image
-            width={460}
-            height={460}
-            src="https://avatars.githubusercontent.com/u/606154"
-            alt=""
-          />
+          <Image width={460} height={460} src="/profile.jpg" alt="" />
         </figure>
         <div className="text-center sm:text-left">
           <p className="text-2xl mb-2 font-light">
-            Hello! I&apos;m <span className="text-amber-500">Marty</span>, a web
-            developer.
+            Hello! I&apos;m <span className="text-amber-500">Marty</span>{' '}
+            &ndash; a web developer.
           </p>
           <article className="prose md:max-w-none">
             <p>
