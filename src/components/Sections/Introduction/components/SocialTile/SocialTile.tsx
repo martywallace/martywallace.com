@@ -27,7 +27,7 @@ export const SocialTile = ({ icon, title, summary, url }: Props) => {
           <FontAwesomeIcon className="text-xl mr-3" icon={icon} />
           <h3 className="font-bold text-gray-100">{title}</h3>
         </div>
-        <article className="prose transition group-hover:text-gray-100">
+        <article className="prose transition group-hover:text-gray-100 text-sm">
           <p>{summary}</p>
         </article>
       </div>

@@ -3,8 +3,6 @@ import {
   faLinkedin,
   faStackOverflow,
 } from '@fortawesome/free-brands-svg-icons';
-import { faChevronDown } from '@fortawesome/pro-light-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Section from '../../Section';
 import SocialTile from './components/SocialTile';
 import Image from 'next/image';
@@ -20,7 +18,7 @@ export const Introduction = () => {
     <Section fullHeight padded>
       <Container>
         <div className="flex flex-col sm:flex-row items-center sm:space-x-8 mx-auto max-w-screen-sm mb-16">
-          <figure className="block flex-shrink-0 w-32 h-32 mx-auto rounded-md shadow-lg overflow-hidden mb-8 sm:mb-0">
+          <figure className="block flex-shrink-0 w-28 h-28 mx-auto rounded-md shadow-lg overflow-hidden mb-8 sm:mb-0">
             <Image width={460} height={460} src="/profile.jpg" alt="" />
           </figure>
           <div className="text-center sm:text-left">
@@ -42,25 +40,21 @@ export const Introduction = () => {
           <SocialTile
             icon={faGithub}
             title="GitHub"
-            summary="View my open-source projects."
+            summary="My open-source projects."
             url={SOCIAL_GITHUB}
           />
           <SocialTile
             icon={faLinkedin}
             title="LinkedIn"
-            summary="View my public LinkedIn profile."
+            summary="My public LinkedIn profile."
             url={SOCIAL_LINKEDIN}
           />
           <SocialTile
             icon={faStackOverflow}
             title="StackOverflow"
-            summary="View my 11+ years of Q&A contributions."
+            summary="My Q&A contributions."
             url={SOCIAL_STACKOVERFLOW}
           />
-        </div>
-
-        <div className="text-center mt-16 animate-bounce">
-          <FontAwesomeIcon icon={faChevronDown} />
         </div>
       </Container>
     </Section>
