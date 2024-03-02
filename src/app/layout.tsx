@@ -4,6 +4,7 @@ import { ReactNode } from 'react';
 import Script from 'next/script';
 import Footer from '../components/Footer';
 import { Metadata } from 'next';
+import Header from '../components/Header';
 
 type Props = {
   readonly children: ReactNode;
@@ -48,6 +49,8 @@ export default function RootLayout({ children }: Props) {
       </head>
 
       <body>
+        <Header />
+
         <main>{children}</main>
 
         <Footer />
