@@ -8,6 +8,9 @@ const QUERY = gql`
       postDate
       ... on articles_default_Entry {
         body
+        heroImage {
+          url
+        }
       }
     }
   }
@@ -22,6 +25,7 @@ export type Response = {
     readonly title: string;
     readonly body: string;
     readonly postDate: string;
+    readonly heroImage: [{ readonly url: string }] | [];
   } | null;
 };
 
