@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Raleway', 'sans-serif'],
+        sans: ['Noto Sans', 'sans-serif'],
       },
       typography: (theme) => ({
         DEFAULT: {

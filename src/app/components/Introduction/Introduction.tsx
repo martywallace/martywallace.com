@@ -3,7 +3,6 @@ import {
   faLinkedin,
   faStackOverflow,
 } from '@fortawesome/free-brands-svg-icons';
-import Section from '../../Section';
 import SocialTile from './components/SocialTile';
 import Image from 'next/image';
 import {
@@ -11,9 +10,10 @@ import {
   SOCIAL_LINKEDIN,
   SOCIAL_STACKOVERFLOW,
 } from '../../../constants';
-import Container from '../../Container';
+import Section from '../Section';
+import Container from '../../../components/Container';
 
-export const Introduction = () => {
+export function Introduction() {
   return (
     <Section fullHeight padded>
       <Container>
@@ -59,4 +59,4 @@ export const Introduction = () => {
       </Container>
     </Section>
   );
-};
+}

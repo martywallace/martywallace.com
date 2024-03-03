@@ -3,12 +3,13 @@ import {
   faNewspaper,
   faShoppingBag,
 } from '@fortawesome/pro-light-svg-icons';
-import Section from '../../Section';
-import SectionTitle from '../../SectionTitle';
-import Experience from './components/Experience';
-import Container from '../../Container';
 
-export const History = () => {
+import Experience from './components/Experience';
+import Section from '../Section';
+import Container from '../../../components/Container';
+import SectionTitle from '../SectionTitle';
+
+export function Highlights() {
   return (
     <Section padded>
       <Container>
@@ -57,4 +58,4 @@ export const History = () => {
       </Container>
     </Section>
   );
-};
+}

@@ -2,6 +2,7 @@
 
 import { format } from 'date-fns';
 import { track } from '../../../../tracking';
+import Link from 'next/link';
 
 type Props = {
   readonly title: string;
@@ -24,15 +25,13 @@ const Publication = ({ title, excerpt, date, url }: Props) => {
 
       <div className="pl-5">
         <h4 className="font-bold">
-          <a
+          <Link
             onClick={() => track('article.title.click', { url })}
             className="hover:underline"
             href={url}
-            target="_blank"
-            rel="noopener noreferrer"
           >
             {title}
-          </a>
+          </Link>
         </h4>
         <div className="prose max-w-none mb-2">
           <p className="line-clamp-2">{excerpt}</p>
@@ -42,10 +41,8 @@ const Publication = ({ title, excerpt, date, url }: Props) => {
             onClick={() => track('article.read-more.click', { url })}
             className="text-amber-500 transition hover:text-amber-300"
             href={url}
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            Read more&hellip;{' '}
+            Read more&hellip;
           </a>
         </div>
       </div>

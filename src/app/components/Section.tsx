@@ -1,5 +1,5 @@
-import classNames from 'classnames';
 import { ReactNode } from 'react';
+import clsx from 'clsx';
 
 type Props = {
   readonly fullHeight?: boolean;
@@ -18,8 +18,8 @@ const Section = ({
 }: Props) => {
   return (
     <section
-      className={classNames(
-        'flex items-center border-b border-gray-700 last:border-b-0',
+      className={clsx(
+        'flex items-center border-b border-gray-800 last:border-b-0',
         {
           'min-h-screen': fullHeight,
           'bg-gray-800': style === 'light',
@@ -27,7 +27,7 @@ const Section = ({
         },
       )}
     >
-      <div className={classNames('w-full', containerClassName)}>{children}</div>
+      <div className={clsx('w-full', containerClassName)}>{children}</div>
     </section>
   );
 };

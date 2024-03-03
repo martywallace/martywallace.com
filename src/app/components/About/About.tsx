@@ -1,10 +1,10 @@
-import Section from '../../Section';
-import SectionTitle from '../../SectionTitle';
 import Skill from './components/Skill';
 import SkillGroup from './components/SkillGroup';
-import Container from '../../Container';
+import Section from '../Section';
+import Container from '../../../components/Container';
+import SectionTitle from '../SectionTitle';
 
-export const About = () => {
+export function About() {
   return (
     <Section padded>
       <Container>
@@ -66,4 +66,4 @@ export const About = () => {
       </Container>
     </Section>
   );
-};
+}

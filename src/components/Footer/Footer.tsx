@@ -17,7 +17,7 @@ import Email from './components/Email';
 export function Footer() {
   return (
     <footer className="">
-      <section className="bg-gray-800 py-12">
+      <section className="bg-gray-950 py-12">
         <Container className="grid gap-10 sm:grid-cols-3">
           <div className="col-span-2">
             <h3 className="font-light text-gray-100 text-lg mb-5 flex items-center space-x-3">
@@ -37,8 +37,8 @@ export function Footer() {
           </div>
           <div className="flex sm:items-end sm:justify-end space-x-3">
             <SocialLink icon={faGithub} href={SOCIAL_GITHUB} />
-            <SocialLink icon={faStackOverflow} href={SOCIAL_STACKOVERFLOW} />
             <SocialLink icon={faLinkedin} href={SOCIAL_LINKEDIN} />
+            <SocialLink icon={faStackOverflow} href={SOCIAL_STACKOVERFLOW} />
           </div>
         </Container>
       </section>

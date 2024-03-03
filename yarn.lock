@@ -1045,13 +1045,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.3.2":
-  version: 2.3.2
-  resolution: "classnames@npm:2.3.2"
-  checksum: cd50ead57b4f97436aaa9f9885c6926323efc7c2bea8e3d4eb10e4e972aa6a1cfca1c7a0e06f8a199ca7498d4339e30bb6002e589e61c9f21248cbf3e8b0b18d
-  languageName: node
-  linkType: hard
-
 "clean-stack@npm:^2.0.0":
   version: 2.2.0
   resolution: "clean-stack@npm:2.2.0"
@@ -2847,7 +2840,6 @@ __metadata:
     "@types/react-dom": "npm:^18.2.17"
     "@uidotdev/usehooks": "npm:^2.4.1"
     autoprefixer: "npm:^10.4.12"
-    classnames: "npm:^2.3.2"
     clsx: "npm:^2.1.0"
     date-fns: "npm:^2.30.0"
     eslint: "npm:^8.55.0"
