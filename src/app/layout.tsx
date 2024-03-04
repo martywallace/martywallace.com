@@ -5,6 +5,7 @@ import Script from 'next/script';
 import Footer from '../components/Footer';
 import { Metadata } from 'next';
 import Header from '../components/Header';
+import { SkeletonTheme } from 'react-loading-skeleton';
 
 type Props = {
   readonly children: ReactNode;
@@ -52,7 +53,9 @@ export default function RootLayout({ children }: Props) {
       <body>
         <Header />
 
-        <main>{children}</main>
+        <SkeletonTheme baseColor="#374151" highlightColor="#686F7D">
+          <main>{children}</main>
+        </SkeletonTheme>
 
         <Footer />
       </body>
