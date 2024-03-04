@@ -4,19 +4,25 @@ import {
   faShoppingBag,
 } from '@fortawesome/pro-light-svg-icons';
 
-import Experience from './components/Experience';
+import Highlight from './components/Highlight';
 import Section from '../Section';
 import Container from '../../../components/Container';
 import SectionTitle from '../SectionTitle';
+import Experience from './components/Experience';
+import { Response } from '../../queries/getHomepageContent';
 
-export function Highlights() {
+type Props = {
+  readonly experience: Response['home']['experience'];
+};
+
+export function History({ experience }: Props) {
   return (
     <Section padded>
       <Container>
-        <SectionTitle title="Work Highlights" align="center" />
+        <SectionTitle title="Career Overview" align="center" />
 
-        <div className="grid gap-3 grid-cols-1 lg:grid-cols-3">
-          <Experience icon={faNewspaper} title="Content Automation">
+        <div className="grid gap-3 grid-cols-1 lg:grid-cols-3 mb-20">
+          <Highlight icon={faNewspaper} title="Content Automation">
             <p>
               I led (from a technical perspective) and delivered a project that
               schedules and composes financial content at scale, delivering
@@ -28,8 +34,8 @@ export function Highlights() {
               registrations by a significant margin over multiple years,
               allowing us to grow with close to zero cost overhead.
             </p>
-          </Experience>
-          <Experience icon={faShoppingBag} title="Custom eCommerce">
+          </Highlight>
+          <Highlight icon={faShoppingBag} title="Custom eCommerce">
             <p>
               I have worked on completely custom user-facing and back-of-house
               e-commerce software.
@@ -40,8 +46,8 @@ export function Highlights() {
               and sources. This software has improved the throughput efficiency
               for new orders by many multiples.
             </p>
-          </Experience>
-          <Experience icon={faCode} title="GraphQL Adoption">
+          </Highlight>
+          <Highlight icon={faCode} title="GraphQL Adoption">
             <p>
               I successfully championed the adoption of GraphQL in our team.
               This involved consistent RFC processes, CI/CD improvements,
@@ -53,8 +59,22 @@ export function Highlights() {
               enabling significantly accelerated delivery of new features and
               functionality.
             </p>
-          </Experience>
+          </Highlight>
         </div>
+
+        <section>
+          {experience.map((exp, index) => (
+            <Experience
+              key={exp.id}
+              workplace={exp.workplace}
+              timeframe={exp.timeframe}
+              logo={exp.logo[0]?.url}
+              last={index === experience.length - 1}
+            >
+              {exp.body}
+            </Experience>
+          ))}
+        </section>
       </Container>
     </Section>
   );

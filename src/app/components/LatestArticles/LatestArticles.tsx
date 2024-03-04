@@ -2,10 +2,10 @@ import Section from '../Section';
 import Container from '../../../components/Container';
 import SectionTitle from '../SectionTitle';
 import Publication from './components/Publication';
-import { Response } from '../../queries/getHomepageArticles';
+import { Response } from '../../queries/getHomepageContent';
 
 type Props = {
-  readonly articles: Response['entries'];
+  readonly articles: Response['articles'];
 };
 
 export function LatestArticles({ articles }: Props) {

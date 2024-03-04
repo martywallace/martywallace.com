@@ -1,18 +1,18 @@
-import { getHomepageArticles } from './queries/getHomepageArticles';
+import { getHomepageContent } from './queries/getHomepageContent';
 import Introduction from './components/Introduction';
 import About from './components/About';
 import LatestArticles from './components/LatestArticles';
-import Highlights from './components/History';
+import History from './components/History';
 
 export default async function Home() {
-  const { entries } = await getHomepageArticles();
+  const { articles, home } = await getHomepageContent();
 
   return (
     <>
       <Introduction />
       <About />
-      <Highlights />
-      <LatestArticles articles={entries} />
+      <History experience={home.experience} />
+      <LatestArticles articles={articles} />
     </>
   );
 }

@@ -1,1 +1,1 @@
-export { Highlights as default } from './Highlights';
+export { History as default } from './History';
