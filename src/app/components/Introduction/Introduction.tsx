@@ -18,15 +18,20 @@ export function Introduction() {
     <Section fullHeight padded>
       <Container>
         <div className="flex flex-col sm:flex-row items-center sm:space-x-8 mx-auto max-w-screen-sm mb-16">
-          <figure className="block flex-shrink-0 w-28 h-28 mx-auto rounded-md shadow-lg overflow-hidden mb-8 sm:mb-0">
-            <Image width={460} height={460} src="/profile.jpg" alt="" />
+          <figure className="block flex-shrink-0 w-28 h-28 mx-auto rounded-full shadow-lg overflow-hidden mb-8 sm:mb-0">
+            <Image
+              width={460}
+              height={460}
+              src="https://storage.martywallace.com/ai-profile.jpg"
+              alt=""
+            />
           </figure>
           <div className="text-center sm:text-left">
             <p className="text-2xl mb-2 font-light">
               Hello! I&apos;m <span className="text-amber-500">Marty</span>{' '}
               &ndash; a web developer.
             </p>
-            <article className="prose md:max-w-none">
+            <article className="prose md:max-w-none prose-invert">
               <p>
                 I specialise in architecting and developing large-scale
                 technical solutions while keeping them <em>simple</em>,{' '}

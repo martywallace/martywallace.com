@@ -22,7 +22,7 @@ export default async function Page() {
             <Link className="block" href={`/articles/${entry.slug}`}>
               <figure>
                 {entry.heroImage.map((image) => (
-                  <figure className="relative bg-gray-700" key={image.url}>
+                  <figure className="relative bg-gray-700 h-48" key={image.url}>
                     <Image
                       quality={95}
                       src={image.url}

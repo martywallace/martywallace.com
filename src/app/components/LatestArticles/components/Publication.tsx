@@ -3,6 +3,8 @@
 import { format } from 'date-fns';
 import { track } from '../../../../tracking';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/pro-light-svg-icons';
 
 type Props = {
   readonly title: string;
@@ -37,13 +39,14 @@ const Publication = ({ title, excerpt, date, url }: Props) => {
           <p className="line-clamp-2">{excerpt}</p>
         </div>
         <div>
-          <a
+          <Link
             onClick={() => track('article.read-more.click', { url })}
-            className="text-amber-500 transition hover:text-amber-300"
+            className="space-x-2 flex items-center text-amber-500 transition hover:text-amber-300"
             href={url}
           >
-            Read more&hellip;
-          </a>
+            <span>Read</span>
+            <FontAwesomeIcon icon={faChevronRight} size="xs" />
+          </Link>
         </div>
       </div>
     </article>
