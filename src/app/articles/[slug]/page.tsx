@@ -65,7 +65,7 @@ export default async function Page({ params }: Props) {
           <h1 className="text-3xl font-light mb-3">{entry.title}</h1>
           <div className="text-sm mb-8 text-gray-500">
             <time dateTime={entry.postDate}>
-              {format(new Date(entry.postDate), 'do MMM yyyy')}
+              {format(new Date(entry.postDate), 'do MMMM yyyy')}
             </time>{' '}
             &middot; by{' '}
             <Link className="underline hover:text-white" href="/">
