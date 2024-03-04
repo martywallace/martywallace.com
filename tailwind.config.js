@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Noto Sans', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -21,6 +22,13 @@ module.exports = {
               '&:hover': {
                 color: theme('colors.white'),
               },
+            },
+            pre: {
+              backgroundColor: theme('colors.gray.900'),
+            },
+            blockquote: {
+              color: theme('colors.gray.500'),
+              borderLeftColor: theme('colors.gray.700'),
             },
           },
         },

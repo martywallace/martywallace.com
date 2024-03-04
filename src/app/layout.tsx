@@ -34,6 +34,7 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en-AU">
       <head>
+        <title>Marty - Web Developer</title>
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=UA-16827384-5"

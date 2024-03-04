@@ -1,10 +1,11 @@
 import { getArticle } from './queries/getArticle';
 import { notFound } from 'next/navigation';
-import Markdown from 'react-markdown';
 import Container from '../../../components/Container';
 import { format } from 'date-fns';
 import Image from 'next/image';
 import { Metadata } from 'next';
+import MarkdownRenderer from '../../../components/MarkdownRenderer';
+import Link from 'next/link';
 
 type Props = {
   readonly params: {
@@ -65,12 +66,14 @@ export default async function Page({ params }: Props) {
           <div className="text-sm mb-8 text-gray-500">
             <time dateTime={entry.postDate}>
               {format(new Date(entry.postDate), 'do MMM yyyy')}
-            </time>
+            </time>{' '}
+            &middot; by{' '}
+            <Link className="underline hover:text-white" href="/">
+              Marty Wallace
+            </Link>
           </div>
 
-          <Markdown className="prose prose-invert max-w-none">
-            {entry.body}
-          </Markdown>
+          <MarkdownRenderer>{entry.body}</MarkdownRenderer>
         </div>
       </article>
     </Container>
