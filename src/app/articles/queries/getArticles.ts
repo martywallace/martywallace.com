@@ -31,4 +31,5 @@ export type Response = {
   }[];
 };
 
-export const getArticles = () => request<Response, Variables>(QUERY);
+export const getArticles = () =>
+  request<Response, Variables>(QUERY, undefined, 900);

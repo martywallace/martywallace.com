@@ -10,7 +10,7 @@ type Props = {
 export default function SocialLink({ icon, href }: Props) {
   return (
     <Link
-      className="inline-block text-gray-400 hover:text-gray-100 text-xl"
+      className="inline-block text-gray-400 hover:text-gray-100 text-xl transition-all duration-150 ease-in-out"
       href={href}
       target="_blank"
     >

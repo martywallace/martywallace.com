@@ -1,11 +1,10 @@
 import { DocumentNode } from 'graphql/language';
 import { print } from 'graphql';
-import { RequestCache } from 'undici-types';
 
 export async function request<R, V>(
   query: DocumentNode,
   variables?: V,
-  cache: RequestCache = 'no-cache',
+  revalidate: number | false = false,
 ): Promise<R> {
   const response = await fetch(`https://admin.martywallace.com/graphql`, {
     method: 'POST',
@@ -16,7 +15,9 @@ export async function request<R, V>(
       query: print(query),
       variables,
     }),
-    cache,
+    next: {
+      revalidate,
+    },
   });
 
   const json = await response.json();

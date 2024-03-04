@@ -7,9 +7,12 @@ const QUERY = gql`
       title
       postDate
       ... on articles_default_Entry {
+        excerpt
         body
         heroImage {
           url
+          width
+          height
         }
       }
     }
@@ -23,11 +26,20 @@ export type Variables = {
 export type Response = {
   readonly entry: {
     readonly title: string;
+    readonly excerpt: string;
     readonly body: string;
     readonly postDate: string;
-    readonly heroImage: [{ readonly url: string }] | [];
+    readonly heroImage:
+      | [
+          {
+            readonly url: string;
+            readonly width: number;
+            readonly height: number;
+          },
+        ]
+      | [];
   } | null;
 };
 
 export const getArticle = (slug: string) =>
-  request<Response, Variables>(QUERY, { slug });
+  request<Response, Variables>(QUERY, { slug }, 3600);

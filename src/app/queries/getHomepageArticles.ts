@@ -27,4 +27,5 @@ export type Response = {
   }[];
 };
 
-export const getHomepageArticles = () => request<Response, Variables>(QUERY);
+export const getHomepageArticles = () =>
+  request<Response, Variables>(QUERY, undefined, 3600);
