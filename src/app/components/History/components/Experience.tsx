@@ -1,6 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 import clsx from 'clsx';
 import MarkdownRenderer from '../../../../components/MarkdownRenderer';
+import { useState } from 'react';
+import { track } from '../../../../tracking';
 
 type Props = {
   readonly workplace: string;
@@ -17,6 +21,8 @@ export default function Experience({
   children,
   last = false,
 }: Props) {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <div className="grid md:grid-cols-4 md:px-12">
       <div
@@ -43,7 +49,23 @@ export default function Experience({
           'pb-14': !last,
         })}
       >
-        <MarkdownRenderer>{children}</MarkdownRenderer>
+        <div
+          className={clsx('mb-4', {
+            'line-clamp-3': !expanded,
+          })}
+        >
+          <MarkdownRenderer>{children}</MarkdownRenderer>
+        </div>
+
+        <button
+          className="text-sm text-gray-500 hover:text-white underline"
+          onClick={() => {
+            setExpanded(!expanded);
+            track('experience.toggle', { workplace, expanded: !expanded });
+          }}
+        >
+          {expanded ? <>Collapse</> : <>Read more&hellip;</>}
+        </button>
       </div>
     </div>
   );

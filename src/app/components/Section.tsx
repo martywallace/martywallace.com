@@ -23,7 +23,7 @@ const Section = ({
         {
           'min-h-screen': fullHeight,
           'bg-gray-800': style === 'light',
-          'lg:py-28 py-6': padded,
+          'lg:py-28 py-20': padded,
         },
       )}
     >

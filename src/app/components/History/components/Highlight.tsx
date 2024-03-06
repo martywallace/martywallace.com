@@ -14,15 +14,15 @@ type Props = {
 const Highlight = ({ icon, title, children }: Props) => {
   return (
     <article
-      onMouseEnter={() => track('experience.mouse-enter', { title })}
-      onMouseLeave={() => track('experience.mouse-leave', { title })}
+      onMouseEnter={() => track('highlight.mouse-enter', { title })}
+      onMouseLeave={() => track('highlight.mouse-leave', { title })}
       className="p-5 rounded-md border border-gray-700 bg-gray-800 shadow-md group lg:hover:-top-2 relative top-0 md:transition-all hover:bg-gray-700 duration-150 ease-in-out"
     >
-      <div className="flex items-center mb-3">
-        <span className="w-8 h-8 bg-amber-500 text-gray-900 rounded-md shadow-lg flex items-center justify-center">
+      <div className="-ml-8 rounded-md flex items-center mb-3 bg-amber-500 shadow-lg text-gray-900 space-x-1">
+        <span className="w-8 h-8 flex items-center justify-center">
           <FontAwesomeIcon icon={icon} />
         </span>
-        <h3 className="ml-3 font-bold">{title}</h3>
+        <h3 className="font-bold text-sm">{title}</h3>
       </div>
       <div className="prose transition group-hover:text-gray-100">
         {children}
