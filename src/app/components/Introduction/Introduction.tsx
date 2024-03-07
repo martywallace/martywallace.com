@@ -16,7 +16,15 @@ import Container from '../../../components/Container';
 export function Introduction() {
   return (
     <Section fullHeight padded>
-      <Container>
+      <Image
+        width={2376}
+        height={1344}
+        src="https://storage.martywallace.com/background.jpg"
+        className="absolute inset-0 -z-10 w-full h-full object-cover opacity-10"
+        alt=""
+      />
+
+      <Container className="relative z-[5]">
         <div className="flex flex-col sm:flex-row items-center sm:space-x-8 mx-auto max-w-screen-sm mb-16">
           <figure className="block flex-shrink-0 w-28 h-28 mx-auto rounded-full shadow-lg overflow-hidden mb-8 sm:mb-0">
             <Image
@@ -41,7 +49,7 @@ export function Introduction() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 mx-auto gap-2 max-w-screen-md">
+        <div className="grid sm:grid-cols-3 mx-auto gap-2 max-w-xs sm:max-w-screen-md">
           <SocialTile
             icon={faGithub}
             title="GitHub"

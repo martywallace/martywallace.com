@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     siteName: 'Marty - Web Developer',
     images: [
       {
-        url: 'https://avatars.githubusercontent.com/u/606154',
-        width: 512,
-        height: 512,
+        url: 'http://localhost:3000/_next/image?url=https%3A%2F%2Fstorage.martywallace.com%2Fai-profile.jpg&w=640&q=75',
+        width: 640,
+        height: 640,
         alt: 'Marty Wallace',
       },
     ],
