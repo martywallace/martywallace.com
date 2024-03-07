@@ -462,6 +462,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/nprogress@npm:^0.2.2":
+  version: 0.2.3
+  resolution: "@types/nprogress@npm:0.2.3"
+  checksum: cac0fe73aca79bc1472a1556f56303df72026f2fcd8dbe311fe84b1f46e454b9040c1e69223d94e3bf156a5986382170c52ebda19aa70f555f1b6855d8f744a6
+  languageName: node
+  linkType: hard
+
 "@types/prop-types@npm:*":
   version: 15.7.11
   resolution: "@types/prop-types@npm:15.7.11"
@@ -2987,6 +2994,7 @@ __metadata:
     graphql: "npm:^16.8.1"
     graphql-tag: "npm:^2.12.6"
     next: "npm:^14.0.4"
+    nextjs-toploader: "npm:^1.6.6"
     postcss: "npm:^8.4.32"
     prettier: "npm:^3.1.1"
     react: "npm:^18.2.0"
@@ -3596,6 +3604,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nextjs-toploader@npm:^1.6.6":
+  version: 1.6.6
+  resolution: "nextjs-toploader@npm:1.6.6"
+  dependencies:
+    "@types/nprogress": "npm:^0.2.2"
+    nprogress: "npm:^0.2.0"
+    prop-types: "npm:^15.8.1"
+  peerDependencies:
+    next: ">= 6.0.0"
+    react: ">= 16.0.0"
+    react-dom: ">= 16.0.0"
+  checksum: 1be1aece9291058895a44a6f496dc355635616ad9c46eec1061cf13f685ce9fef9362346aaecde88a6ad7a0bc9e512c35851884eb1af15058bdedc85ab6d7f24
+  languageName: node
+  linkType: hard
+
 "node-gyp@npm:latest":
   version: 10.0.1
   resolution: "node-gyp@npm:10.0.1"
@@ -3645,6 +3668,13 @@ __metadata:
   version: 0.1.2
   resolution: "normalize-range@npm:0.1.2"
   checksum: bf39b73a63e0a42ad1a48c2bd1bda5a07ede64a7e2567307a407674e595bcff0fa0d57e8e5f1e7fa5e91000797c7615e13613227aaaa4d6d6e87f5bd5cc95de6
+  languageName: node
+  linkType: hard
+
+"nprogress@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "nprogress@npm:0.2.0"
+  checksum: eab9a923a1ad1eed71a455ecfbc358442dd9bcd71b9fa3fa1c67eddf5159360b182c218f76fca320c97541a1b45e19ced04e6dcb044a662244c5419f8ae9e821
   languageName: node
   linkType: hard
 

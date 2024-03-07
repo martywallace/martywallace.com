@@ -12,6 +12,7 @@ import {
   SOCIAL_STACKOVERFLOW,
 } from '../../constants';
 import Navigation from './components/Navigation/Navigation';
+import NextTopLoader from 'nextjs-toploader';
 
 export function Header() {
   return (
@@ -29,6 +30,8 @@ export function Header() {
           </div>
         </div>
       </Container>
+
+      <NextTopLoader color="#F49F30" height={2} showSpinner={false} />
     </header>
   );
 }
