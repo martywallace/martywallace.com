@@ -79,11 +79,9 @@ export function History({ experience }: Props) {
           ))}
         </section>
 
-        <h3 className="text-2xl mb-10 text-center">
-          Who I&apos;ve Worked With
-        </h3>
+        <h3 className="text-2xl mb-10 text-center">Who I Work With</h3>
 
-        <section className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 md:px-8">
+        <section className="grid sm:grid-cols-2 md:grid-cols-4 gap-3 md:px-8">
           <Client
             name="Alessi"
             logo="https://storage.martywallace.com/logos/alessi_logo.jpeg"
@@ -103,11 +101,6 @@ export function History({ experience }: Props) {
             name="Girls on Fire"
             logo="https://storage.martywallace.com/logos/gof_logo.jpeg"
             website="girlsonfire.com.au"
-          />
-          <Client
-            name="Weaverbirds"
-            logo="https://storage.martywallace.com/logos/weaverbirds_logo.jpeg"
-            website="weaverbirds.com.au"
           />
         </section>
       </Container>

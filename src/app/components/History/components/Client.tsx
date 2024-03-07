@@ -8,7 +8,7 @@ type Props = {
 
 export default function Client({ name, logo, website }: Props) {
   return (
-    <article className="border rounded-md border-gray-800 shadow-lg hover:-top-1 hover:border-gray-700 top-0 relative transition-all duration-150 ease-in-out">
+    <article className="border bg-gray-800 rounded-md border-gray-800 shadow-lg hover:-top-1 hover:border-gray-700 top-0 relative transition-all duration-150 ease-in-out">
       <a
         className="p-3 flex items-center space-x-3"
         href={`//${website}`}
@@ -24,9 +24,9 @@ export default function Client({ name, logo, website }: Props) {
             className="object-cover w-full h-full"
           />
         </figure>
-        <div className="flex-grow leading-snug">
+        <div className="flex-grow leading-snug overflow-hidden">
           <h5 className="font-bold text-gray-300">{name}</h5>
-          <div className="text-xs text-gray-500">{website}</div>
+          <div className="text-xs text-gray-500 truncate">{website}</div>
         </div>
       </a>
     </article>
