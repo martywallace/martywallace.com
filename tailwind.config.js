@@ -14,9 +14,12 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            '--tw-prose-invert-headings': theme('colors.gray.200'),
+            '--tw-prose-invert-bold': theme('colors.gray.300'),
+            '--tw-prose-invert-code': theme('colors.gray.200'),
             color: theme('colors.gray.400'),
             a: {
-              color: theme('colors.amber.500'),
+              color: theme('colors.gray.300'),
               textDecoration: 'underline',
               fontWeight: 'inherit',
               '&:hover': {
