@@ -41,7 +41,7 @@ export default async function Page() {
                     {format(new Date(entry.postDate), 'do MMM yyyy')}
                   </time>
                 </div>
-                <div className="prose max-w-none prose-invert">
+                <div className="prose max-w-none prose-invert line-clamp-5">
                   {entry.excerpt}
                 </div>
               </div>

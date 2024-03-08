@@ -15,12 +15,12 @@ type Props = {
 
 const Publication = ({ title, excerpt, date, url }: Props) => {
   return (
-    <article className="flex mb-10 last:mb-0">
-      <time className="flex flex-shrink-0 w-20 rounded-md h-16 items-center flex-col justify-center bg-gray-700 text-white shadow-lg">
+    <article className="flex mb-6 last:mb-0">
+      <time className="flex flex-shrink-0 w-20 rounded-md h-16 items-center flex-col justify-center bg-gray-800 text-gray-200 shadow-lg">
         <strong className="block text-xl leading-tight">
           {format(date, 'dd')}
         </strong>
-        <span className="text-xs text-gray-300">
+        <span className="text-xs text-gray-400">
           {format(date, 'MMM yyyy')}
         </span>
       </time>
@@ -35,13 +35,13 @@ const Publication = ({ title, excerpt, date, url }: Props) => {
             {title}
           </Link>
         </h4>
-        <div className="prose max-w-none mb-2">
-          <p className="line-clamp-2">{excerpt}</p>
+        <div className="prose max-w-none mb-1">
+          <p className="line-clamp-1">{excerpt}</p>
         </div>
         <div>
           <Link
             onClick={() => track('article.read-more.click', { url })}
-            className="space-x-2 flex items-center text-amber-500 transition hover:text-amber-300"
+            className="space-x-2 flex items-center text-amber-500 transition hover:text-amber-300 text-sm"
             href={url}
           >
             <span>Read</span>

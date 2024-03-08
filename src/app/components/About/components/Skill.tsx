@@ -13,8 +13,8 @@ const Skill = ({ name, core }: Props) => {
       className={clsx(
         'flex items-center px-4 py-2 text-sm rounded-sm shadow-md space-x-2',
         {
-          'border border-amber-500 text-white': core,
-          'bg-gray-800': !core,
+          'border border-amber-500 text-gray-200': core,
+          'bg-gray-800 text-gray-400': !core,
         },
       )}
     >

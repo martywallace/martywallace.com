@@ -34,7 +34,7 @@ export function Introduction() {
               alt=""
             />
           </figure>
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-left drop-shadow-lg">
             <p className="text-2xl mb-2 font-light">
               Hello! I&apos;m <span className="text-amber-500">Marty</span>{' '}
               &ndash; a web developer.
