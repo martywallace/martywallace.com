@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: 'Marty - Web Developer',
     images: [
       {
-        url: 'http://localhost:3000/_next/image?url=https%3A%2F%2Fstorage.martywallace.com%2Fai-profile.jpg&w=640&q=75',
+        url: 'https://storage.martywallace.com/ai-profile.jpg',
         width: 640,
         height: 640,
         alt: 'Marty Wallace',
