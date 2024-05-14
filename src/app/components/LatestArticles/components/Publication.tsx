@@ -1,6 +1,5 @@
 'use client';
 
-import { format } from 'date-fns';
 import { track } from '../../../../tracking';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,20 +8,21 @@ import { faChevronRight } from '@fortawesome/pro-light-svg-icons';
 type Props = {
   readonly title: string;
   readonly excerpt: string;
-  readonly date: Date;
+  readonly formattedDate: {
+    readonly date: string;
+    readonly monthYear: string;
+  };
   readonly url: string;
 };
 
-const Publication = ({ title, excerpt, date, url }: Props) => {
+const Publication = ({ title, excerpt, formattedDate, url }: Props) => {
   return (
     <article className="flex mb-6 last:mb-0">
       <time className="flex flex-shrink-0 w-20 rounded-md h-16 items-center flex-col justify-center bg-gray-800 text-gray-200 shadow-lg">
         <strong className="block text-xl leading-tight">
-          {format(date, 'dd')}
+          {formattedDate.date}
         </strong>
-        <span className="text-xs text-gray-400">
-          {format(date, 'MMM yyyy')}
-        </span>
+        <span className="text-xs text-gray-400">{formattedDate.monthYear}</span>
       </time>
 
       <div className="pl-5">
