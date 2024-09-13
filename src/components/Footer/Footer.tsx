@@ -1,18 +1,17 @@
-import Container from '../Container';
-import SocialLink from './components/SocialLink';
 import {
   faGithub,
   faLinkedin,
   faStackOverflow,
 } from '@fortawesome/free-brands-svg-icons';
+import { faMessage } from '@fortawesome/pro-light-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   SOCIAL_GITHUB,
   SOCIAL_LINKEDIN,
   SOCIAL_STACKOVERFLOW,
 } from '../../constants';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMessage } from '@fortawesome/pro-light-svg-icons';
-import Email from './components/Email';
+import Container from '../Container';
+import SocialLink from './components/SocialLink';
 
 export function Footer() {
   return (
@@ -29,11 +28,9 @@ export function Footer() {
                 While my availability for new projects is limited, I&apos;m here
                 to support anything from the initial planning of a new technical
                 concept to hands-on development and ongoing maintenance. Feel
-                free to reach out at:
+                free to reach out on LinkedIn.
               </p>
             </article>
-
-            <Email />
           </div>
           <div className="flex sm:items-end sm:justify-end space-x-3">
             <SocialLink icon={faGithub} href={SOCIAL_GITHUB} />
