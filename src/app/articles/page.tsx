@@ -2,10 +2,10 @@ import { format } from 'date-fns';
 import Image from 'next/image';
 import Link from 'next/link';
 import Container from '../../components/Container';
-import { ArticleMetadata, loadEntries } from '../../services/content';
+import { articleRepository } from '../../content/repositories/articles';
 
 export default async function Page() {
-  const articles = await loadEntries<ArticleMetadata>('articles');
+  const articles = await articleRepository.getManifest();
 
   return (
     <Container>

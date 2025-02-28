@@ -7,11 +7,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Container from '../../../components/Container';
 import MarkdownRenderer from '../../../components/MarkdownRenderer';
-import {
-  ArticleMetadata,
-  loadEntries,
-  loadEntry,
-} from '../../../services/content';
+import { articleRepository } from '../../../content/repositories/articles';
 
 type Props = {
   readonly params: {
@@ -22,7 +18,7 @@ type Props = {
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  const articles = await loadEntries<ArticleMetadata>('articles');
+  const articles = await articleRepository.getManifest();
 
   return articles.map(({ slug }) => ({
     slug,
@@ -30,7 +26,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const entry = await loadEntry<ArticleMetadata>(`articles/${params.slug}`);
+  const entry = await articleRepository.getEntry(params.slug);
 
   if (!entry) {
     return notFound();
@@ -54,10 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function Page({ params }: Props) {
-  const entry = await loadEntry<ArticleMetadata>(
-    `articles/${params.slug}`,
-    true,
-  );
+  const entry = await articleRepository.getEntry(params.slug);
 
   if (!entry) {
     return notFound();

@@ -1,6 +1,6 @@
 import { format } from 'date-fns';
 import Container from '../../../components/Container';
-import { ArticleMetadata, Content } from '../../../services/content';
+import { ArticleMetadata, Content } from '../../../content/repository';
 import Section from '../Section';
 import SectionTitle from '../SectionTitle';
 import Publication from './components/Publication';

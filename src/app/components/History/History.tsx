@@ -5,7 +5,7 @@ import {
 } from '@fortawesome/pro-light-svg-icons';
 
 import Container from '../../../components/Container';
-import { Content, ExperienceMetadata } from '../../../services/content';
+import { Content, ExperienceMetadata } from '../../../content/repository';
 import Section from '../Section';
 import SectionTitle from '../SectionTitle';
 import Client from './components/Client';

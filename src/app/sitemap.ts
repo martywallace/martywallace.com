@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { ArticleMetadata, loadEntries } from '../services/content';
+import { ArticleMetadata, loadEntries } from '../content/repository';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const articles = await loadEntries<ArticleMetadata>('articles');
