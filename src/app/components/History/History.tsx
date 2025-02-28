@@ -3,9 +3,9 @@ import {
   faNewspaper,
   faShoppingBag,
 } from '@fortawesome/pro-light-svg-icons';
-
 import Container from '../../../components/Container';
-import { Content, ExperienceMetadata } from '../../../content/repository';
+import { ExperienceMetadata } from '../../../content/repositories/experience';
+import { Content } from '../../../content/repository';
 import Section from '../Section';
 import SectionTitle from '../SectionTitle';
 import Client from './components/Client';
