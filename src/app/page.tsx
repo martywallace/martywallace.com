@@ -1,18 +1,25 @@
-import { getHomepageContent } from './queries/getHomepageContent';
-import Introduction from './components/Introduction';
+import {
+  ArticleMetadata,
+  ExperienceMetadata,
+  loadEntries,
+} from '../services/content';
 import About from './components/About';
-import LatestArticles from './components/LatestArticles';
 import History from './components/History';
+import Introduction from './components/Introduction';
+import LatestArticles from './components/LatestArticles';
 
 export default async function Home() {
-  const { articles, home } = await getHomepageContent();
+  const [experience, articles] = await Promise.all([
+    loadEntries<ExperienceMetadata>('experience', true),
+    loadEntries<ArticleMetadata>('articles'),
+  ]);
 
   return (
     <>
       <Introduction />
       <About />
-      <History experience={home.experience} />
-      <LatestArticles articles={articles} />
+      <History experience={experience} />
+      <LatestArticles articles={articles.toReversed().slice(0, 3)} />
     </>
   );
 }

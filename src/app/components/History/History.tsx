@@ -4,16 +4,16 @@ import {
   faShoppingBag,
 } from '@fortawesome/pro-light-svg-icons';
 
-import Highlight from './components/Highlight';
-import Section from '../Section';
 import Container from '../../../components/Container';
+import { Content, ExperienceMetadata } from '../../../services/content';
+import Section from '../Section';
 import SectionTitle from '../SectionTitle';
-import Experience from './components/Experience';
-import { Response } from '../../queries/getHomepageContent';
 import Client from './components/Client';
+import Experience from './components/Experience';
+import Highlight from './components/Highlight';
 
 type Props = {
-  readonly experience: Response['home']['experience'];
+  readonly experience: readonly Content<ExperienceMetadata>[];
 };
 
 export function History({ experience }: Props) {
@@ -66,15 +66,15 @@ export function History({ experience }: Props) {
         <h3 className="text-2xl mb-8 text-center">Role History</h3>
 
         <section className="mb-12 md:mb-28">
-          {experience.map((exp, index) => (
+          {experience.map(({ slug, metadata, content }, index) => (
             <Experience
-              key={exp.id}
-              workplace={exp.workplace}
-              timeframe={exp.timeframe}
-              logo={exp.logo[0]?.url}
+              key={slug}
+              workplace={metadata.name}
+              timeframe={metadata.timeframe}
+              logo={metadata.logo}
               last={index === experience.length - 1}
             >
-              {exp.body}
+              {content ?? ''}
             </Experience>
           ))}
         </section>

@@ -1,12 +1,12 @@
-import Section from '../Section';
+import { format } from 'date-fns';
 import Container from '../../../components/Container';
+import { ArticleMetadata, Content } from '../../../services/content';
+import Section from '../Section';
 import SectionTitle from '../SectionTitle';
 import Publication from './components/Publication';
-import { Response } from '../../queries/getHomepageContent';
-import { format } from 'date-fns';
 
 type Props = {
-  readonly articles: Response['articles'];
+  readonly articles: readonly Content<ArticleMetadata>[];
 };
 
 export function LatestArticles({ articles }: Props) {
@@ -16,19 +16,19 @@ export function LatestArticles({ articles }: Props) {
         <SectionTitle title="Latest Articles" />
 
         <div>
-          {articles.map((article) => {
-            const date = new Date(article.postDate);
+          {articles.map(({ slug, metadata }) => {
+            const date = new Date(metadata.date);
 
             return (
               <Publication
-                key={article.id}
-                title={article.title}
-                excerpt={article.excerpt}
+                key={slug}
+                title={metadata.title}
+                excerpt={metadata.excerpt}
                 formattedDate={{
                   date: format(date, 'dd'),
                   monthYear: format(date, 'MMM yyyy'),
                 }}
-                url={`/articles/${article.slug}`}
+                url={`/articles/${slug}`}
               />
             );
           })}

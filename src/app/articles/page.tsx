@@ -1,11 +1,11 @@
-import { getArticles } from './queries/getArticles';
-import Container from '../../components/Container';
 import { format } from 'date-fns';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
+import Container from '../../components/Container';
+import { ArticleMetadata, loadEntries } from '../../services/content';
 
 export default async function Page() {
-  const { entries } = await getArticles();
+  const articles = await loadEntries<ArticleMetadata>('articles');
 
   return (
     <Container>
@@ -14,35 +14,35 @@ export default async function Page() {
       </div>
 
       <div className="grid gap-5 md:grid-cols-3">
-        {entries.map((entry) => (
+        {articles.map(({ slug, metadata }) => (
           <article
             className="bg-gray-800 border border-gray-700 rounded-md overflow-hidden shadow-lg hover:bg-gray-700 top-0 hover:-top-2 relative transition-all duration-150 ease-in-out"
-            key={entry.id}
+            key={slug}
           >
-            <Link className="block" href={`/articles/${entry.slug}`}>
+            <Link className="block" href={`/articles/${slug}`}>
               <figure>
-                {entry.heroImage.map((image) => (
-                  <figure className="relative bg-gray-700 h-48" key={image.url}>
+                {metadata.hero && (
+                  <figure className="relative bg-gray-700 h-48">
                     <Image
                       quality={95}
-                      src={image.url}
+                      src={metadata.hero}
                       alt=""
                       width={320}
                       height={210}
                       className="object-cover w-full h-full"
                     />
                   </figure>
-                ))}
+                )}
               </figure>
               <div className="p-5">
-                <h2 className="text-xl mb-2 leading-tight">{entry.title}</h2>
+                <h2 className="text-xl mb-2 leading-tight">{metadata.title}</h2>
                 <div className="mb-5 text-sm text-gray-500">
-                  <time dateTime={entry.postDate}>
-                    {format(new Date(entry.postDate), 'do MMM yyyy')}
+                  <time dateTime={metadata.date}>
+                    {format(new Date(metadata.date), 'do MMM yyyy')}
                   </time>
                 </div>
                 <div className="prose max-w-none prose-invert line-clamp-5">
-                  {entry.excerpt}
+                  {metadata.excerpt}
                 </div>
               </div>
             </Link>

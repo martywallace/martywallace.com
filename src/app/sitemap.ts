@@ -1,12 +1,12 @@
 import { MetadataRoute } from 'next';
-import { getSitemap } from './queries/getSitemap';
+import { ArticleMetadata, loadEntries } from '../services/content';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const { entries } = await getSitemap();
+  const articles = await loadEntries<ArticleMetadata>('articles');
 
-  return entries.map((entry) => ({
-    url: entry.url,
-    lastModified: new Date(entry.dateUpdated),
+  return articles.map((entry) => ({
+    url: `https://martywallace.com/articles/${entry.metadata.slug}`,
+    lastModified: new Date(entry.metadata.date),
     changeFrequency: 'monthly',
     priority: 0.5,
   }));

@@ -1,11 +1,11 @@
 import '../style.css';
 
-import { ReactNode } from 'react';
-import Script from 'next/script';
-import Footer from '../components/Footer';
 import { Metadata } from 'next';
-import Header from '../components/Header';
+import Script from 'next/script';
+import { ReactNode } from 'react';
 import { SkeletonTheme } from 'react-loading-skeleton';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 type Props = {
   readonly children: ReactNode;
@@ -13,6 +13,7 @@ type Props = {
 
 export const metadata: Metadata = {
   title: 'Marty - Web Developer',
+  metadataBase: new URL('https://martywallace.com'),
   description:
     'Marty Wallace is a software developer that specialises in architecting and developing large-scale technical solutions while keeping them simple, scalable and efficient.',
   openGraph: {
