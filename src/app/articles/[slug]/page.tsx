@@ -1,3 +1,5 @@
+import { faExternalLinkAlt } from '@fortawesome/pro-light-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { format } from 'date-fns';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -99,6 +101,18 @@ export default async function Page({ params }: Props) {
           <MarkdownRenderer>{entry.content ?? ''}</MarkdownRenderer>
         </div>
       </article>
+
+      <div className="flex justify-center pt-5 md:pt-12">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`https://github.com/martywallace/martywallace.com/tree/main/content/articles/${entry.slug}/content.md`}
+          className="flex items-center space-x-2 text-sm text-gray-500 hover:text-white"
+        >
+          <span className="underline">View this article on GitHub</span>
+          <FontAwesomeIcon size="xs" icon={faExternalLinkAlt} />
+        </a>
+      </div>
     </Container>
   );
 }

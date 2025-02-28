@@ -25,6 +25,8 @@ export function getContentRoot() {
   return path.resolve(process.cwd(), 'content');
 }
 
+// todo: validate metadata against zod schema
+
 export async function loadEntries<M>(
   contentDir: string,
   fetchContent = false,
