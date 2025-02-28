@@ -21,18 +21,18 @@ export function Footer() {
           <div className="col-span-2">
             <h3 className="font-light text-gray-100 text-lg mb-5 flex items-center space-x-3">
               <FontAwesomeIcon className="text-sm" icon={faMessage} />
-              <span className="flex-grow">Hire Me</span>
+              <span className="flex-grow">Work With Me</span>
             </h3>
             <article className="prose max-w-none mb-5 text-gray-500">
               <p>
-                While my availability for new projects is limited, I&apos;m here
-                to support anything from the initial planning of a new technical
-                concept to hands-on development and ongoing maintenance. Feel
-                free to reach out on LinkedIn.
+                While my availability is limited, I would love to to support
+                anything from the initial planning of a new technical concept to
+                hands-on development and ongoing maintenance. Feel free to reach
+                out on LinkedIn.
               </p>
             </article>
           </div>
-          <div className="flex sm:items-end sm:justify-end space-x-3">
+          <div className="flex sm:items-end sm:justify-end space-x-4">
             <SocialLink icon={faGithub} href={SOCIAL_GITHUB} />
             <SocialLink icon={faLinkedin} href={SOCIAL_LINKEDIN} />
             <SocialLink icon={faStackOverflow} href={SOCIAL_STACKOVERFLOW} />
@@ -41,7 +41,17 @@ export function Footer() {
       </section>
       <section className="text-sm text-gray-700 py-10">
         <Container>
-          <p>&copy; Marty Wallace &middot; ABN 24 297 658 841</p>
+          <p>
+            &copy; Marty Wallace &middot; ABN 24 297 658 841 &middot;{' '}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/martywallace/martywallace.com"
+              className="hover:text-gray-600"
+            >
+              View on GitHub
+            </a>
+          </p>
         </Container>
       </section>
     </footer>

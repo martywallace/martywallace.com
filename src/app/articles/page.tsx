@@ -14,7 +14,7 @@ export default async function Page() {
       </div>
 
       <div className="grid gap-5 md:grid-cols-3">
-        {articles.map(({ slug, metadata }) => (
+        {articles.toReversed().map(({ slug, metadata }) => (
           <article
             className="bg-gray-800 border border-gray-700 rounded-md overflow-hidden shadow-lg hover:bg-gray-700 top-0 hover:-top-2 relative transition-all duration-150 ease-in-out"
             key={slug}

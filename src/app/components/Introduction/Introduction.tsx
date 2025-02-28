@@ -3,15 +3,15 @@ import {
   faLinkedin,
   faStackOverflow,
 } from '@fortawesome/free-brands-svg-icons';
-import SocialTile from './components/SocialTile';
 import Image from 'next/image';
+import Container from '../../../components/Container';
 import {
   SOCIAL_GITHUB,
   SOCIAL_LINKEDIN,
   SOCIAL_STACKOVERFLOW,
 } from '../../../constants';
 import Section from '../Section';
-import Container from '../../../components/Container';
+import SocialTile from './components/SocialTile';
 
 export function Introduction() {
   return (
@@ -37,7 +37,7 @@ export function Introduction() {
           <div className="text-center sm:text-left drop-shadow-lg">
             <p className="text-2xl mb-2 font-light">
               Hello! I&apos;m <span className="text-amber-500">Marty</span>{' '}
-              &ndash; a web developer.
+              &ndash; a software engineer.
             </p>
             <article className="prose md:max-w-none prose-invert">
               <p>

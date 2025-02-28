@@ -1,6 +1,6 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
 
 type Props = {
   readonly icon: IconProp;
@@ -12,11 +12,11 @@ export default function NavigationItem({ icon, text, href }: Props) {
   return (
     <Link
       href={href}
-      className="flex items-center space-x-4 text-sm p-2 pr-12 hover:bg-gray-900 rounded-md group transition-all duration-150 ease-in-out"
+      className="flex items-center text-sm space-x-4 py-2 pr-12 hover:bg-gray-900 rounded-md group transition-all duration-150 ease-in-out"
     >
-      <span className="bg-gray-700 rounded-md w-5 h-5 flex items-center justify-center group-hover:bg-amber-500 transition-all duration-150 ease-in-out">
+      <span className="w-6">
         <FontAwesomeIcon
-          className="text-gray-400 group-hover:text-gray-900 text-xs transition-all duration-150 ease-in-out"
+          className="text-gray-500 group-hover:text-gray-400 transition-all duration-150 ease-in-out"
           icon={icon}
         />
       </span>

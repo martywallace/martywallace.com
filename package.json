@@ -19,6 +19,7 @@
     "@uidotdev/usehooks": "^2.4.1",
     "clsx": "^2.1.0",
     "date-fns": "^2.30.0",
+    "framer-motion": "^12.4.7",
     "graphql": "^16.8.1",
     "graphql-tag": "^2.12.6",
     "next": "^14.0.4",
