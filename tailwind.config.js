@@ -17,9 +17,9 @@ module.exports = {
             '--tw-prose-invert-headings': theme('colors.gray.200'),
             '--tw-prose-invert-bold': theme('colors.gray.300'),
             '--tw-prose-invert-code': theme('colors.gray.200'),
-            color: theme('colors.gray.400'),
+            color: theme('colors.gray.300'),
             a: {
-              color: theme('colors.gray.300'),
+              color: theme('colors.gray.200'),
               textDecoration: 'underline',
               fontWeight: 'inherit',
               '&:hover': {
@@ -30,8 +30,11 @@ module.exports = {
               backgroundColor: theme('colors.gray.900'),
             },
             blockquote: {
-              color: theme('colors.gray.500'),
-              borderLeftColor: theme('colors.gray.700'),
+              color: theme('colors.gray.400'),
+              borderLeftColor: theme('colors.gray.600'),
+            },
+            strong: {
+              color: theme('colors.gray.100'),
             },
           },
         },

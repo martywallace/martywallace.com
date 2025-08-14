@@ -23,7 +23,7 @@ export function Footer() {
               <FontAwesomeIcon className="text-sm" icon={faMessage} />
               <span className="flex-grow">Work With Me</span>
             </h3>
-            <article className="prose max-w-none mb-5 text-gray-500">
+            <article className="prose max-w-none text-gray-400">
               <p>
                 While my availability is limited, I would love to to support
                 anything from the initial planning of a new technical concept to

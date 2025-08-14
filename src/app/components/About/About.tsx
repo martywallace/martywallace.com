@@ -1,58 +1,47 @@
-import Skill from './components/Skill';
-import Section from '../Section';
 import Container from '../../../components/Container';
+import Section from '../Section';
 import SectionTitle from '../SectionTitle';
 
 export function About() {
   return (
     <Section padded>
       <Container>
-        <SectionTitle title="About Me" />
+        <SectionTitle title="Background & Offering" />
 
-        <div className="grid md:grid-cols-5 gap-20">
-          <article className="prose max-w-none md:col-span-3">
-            <p>
-              I am a self-taught full-stack web developer based in Australia
-              with experience across many disciplines including infrastructure
-              management, backend development and frontend development.
-            </p>
-            <p>
-              My career blends agency and startup experiences. Working in
-              agencies honed my efficiency, client management, and adaptability
-              to tackle ever-changing challenges. Within startups, I&apos;ve
-              pushed my core skills to excel, emerging as a standout talent in
-              the industry.
-            </p>
-            <p>
-              I thrive in a support role that boosts team productivity and
-              satisfaction. My focus lies in streamlining processes through
-              automation, developing and managing shared libraries, and
-              leveraging my expertise in software architecture for large
-              systems. This approach not only facilitates scalability but also
-              enhances the overall developer experience.
-            </p>
-          </article>
-          <div className="md:col-span-2">
-            <h3 className="text-2xl mb-5">My Skills &amp; Technology</h3>
-
-            <section className="grid grid-cols-2 gap-2">
-              <Skill name="TypeScript" core />
-              <Skill name="GraphQL" core />
-              <Skill name="Nest.js" core />
-              <Skill name="React" core />
-              <Skill name="PostgreSQL" core />
-              <Skill name="GitLab" core />
-              <Skill name="PHP" />
-              <Skill name="Vue.js" />
-              <Skill name="Kubernetes" />
-              <Skill name="Cloudflare" />
-              <Skill name="RabbitMQ" />
-              <Skill name="Next.js" />
-              <Skill name="TailwindCSS" />
-              <Skill name="Datadog" />
-            </section>
-          </div>
-        </div>
+        <article className="prose max-w-none md:col-span-3">
+          <p>
+            My career spans agency and startup environments where I&apos;ve
+            solved complex technical challenges for diverse businesses. Agency
+            work taught me to quickly understand business requirements and
+            deliver reliable systems under pressure. Startup experience pushed
+            me to master every aspect of software development and take ownership
+            of complete technical initiatives.
+          </p>
+          <p>
+            <strong>
+              As an independent contractor, you get senior-level expertise
+              across the entire technology stack in a single engagement
+            </strong>
+            . Rather than managing separate specialists for different parts of
+            your system, I can assess your complete technical needs, design
+            optimal solutions, and build everything from data storage through
+            user-facing applications. This eliminates coordination problems,
+            reduces communication overhead, and ensures all technical decisions
+            work together seamlessly.
+          </p>
+          <p>
+            <strong>
+              My unique advantage is deep expertise across the complete
+              technology stack
+            </strong>{' '}
+            &ndash; while most developers either specialize in one area or have
+            surface-level knowledge across many, I&apos;ve developed
+            senior-level proficiency in every layer. From advanced database
+            optimization through complex API design to frontend performance and
+            infrastructure management, this comprehensive depth allows me to
+            make optimal architectural decisions across your entire system.
+          </p>
+        </article>
       </Container>
     </Section>
   );
