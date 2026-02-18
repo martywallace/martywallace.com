@@ -41,7 +41,7 @@ Broadly the three main parts of the project would be:
 
 Rough diagram, with a focus on the development server that ties everything together:
 
-![Engine Diagram](https://storage.martywallace.com/blog/engine-1.png)
+![Engine Diagram](/media/engine-1.png)
 
 This raises the barrier to entry slightly (as the developer needs to setup and run a server locally) but the overall DX gains once setup would be considerable as you get a dedicated communication channel between the tooling and the developer.
 
@@ -56,7 +56,7 @@ The engine itself broadly has the following components:
 
 Expressed visually:
 
-![Engine Architecture](https://storage.martywallace.com/blog/engine-2.png)
+![Engine Architecture](/media/engine-2.png)
 
 The engine will provide an API for components and objects to interact with each other. For example, a `ZombieController` component might look up a player object and move towards it, dealing damage when within range:
 

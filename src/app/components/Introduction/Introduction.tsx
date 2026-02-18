@@ -19,7 +19,7 @@ export function Introduction() {
       <Image
         width={2376}
         height={1344}
-        src="https://storage.martywallace.com/background.jpg"
+        src="/media/background.jpg"
         className="absolute inset-0 -z-10 w-full h-full object-cover opacity-10"
         alt=""
       />
@@ -30,7 +30,7 @@ export function Introduction() {
             <Image
               width={460}
               height={460}
-              src="https://storage.martywallace.com/ai-profile.jpg"
+              src="/media/ai-profile.jpg"
               alt=""
             />
           </figure>
